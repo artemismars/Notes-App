@@ -6,6 +6,7 @@ const swaggerUi = require("swagger-ui-express");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+const URL = process.env.URL || `http://localhost:${PORT}`;
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -15,7 +16,7 @@ const options = {
     },
     servers: [
       {
-        url: `http://localhost:${PORT}`,
+        url: URL,
       },
     ],
   },
