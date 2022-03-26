@@ -9,7 +9,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SendIcon from "@mui/icons-material/Send";
 
@@ -48,10 +48,7 @@ export default function Create() {
     }
   }
 
-  function handleTextFieldChange() {
-    setTitleError(false);
-    setDetailsError(false);
-  }
+  useEffect(() => {});
 
   return (
     <Container>
