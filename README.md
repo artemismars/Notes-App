@@ -14,7 +14,7 @@
 
 ---
 
-## dependencies versions
+## dependency versions
 
 ```js
   "dependencies": {
