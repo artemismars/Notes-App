@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import { grey, purple } from "@mui/material/colors";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
+import Layout from "./components/Layout";
 import Notes from "./pages/Notes";
 import Create from "./pages/Create";
 
@@ -11,6 +11,13 @@ const customTheme = createTheme({
       main: grey[500],
     },
     secondary: purple,
+  },
+  typography: {
+    fontFamily: "Quicksand, serif",
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    fontWeightBold: 600,
   },
 });
 
