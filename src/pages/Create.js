@@ -45,6 +45,7 @@ const categories = [
 ];
 
 const url = "https://artemis-notes-server.herokuapp.com/notes";
+// const url = "http://localhost:8080/notes";
 
 export default function Create() {
   const [note, setNote] = useState([]);
@@ -65,7 +66,7 @@ export default function Create() {
     if (title && details) {
       fetch(url, {
         method: "POST",
-        header: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, details, category }),
       }).then(() => navigate("/"));
     }
