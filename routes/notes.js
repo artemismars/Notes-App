@@ -3,7 +3,11 @@ const db = require("../models/index");
 
 router.post("/", async (req, res) => {
   try {
-    const note = await db.Note.create(req.body);
+    const note = await db.Note.create({
+      title: req.body.title,
+      details: req.body.details,
+      category: req.body.category,
+    });
     console.log(note);
 
     // Website you wish to allow to connect
