@@ -31,6 +31,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openapiSpecification));
+
+app.get("/", (req, res) => {
+  res.send("welcome to note app!");
+});
+
 app.use(require("./routes/global"));
 
 app.listen(PORT, () => {
