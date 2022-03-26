@@ -2,6 +2,8 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { grey, purple } from "@mui/material/colors";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
+import Notes from "./pages/Notes";
+import Create from "./pages/Create";
 
 const customTheme = createTheme({
   palette: {
@@ -18,7 +20,8 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path="/" element="" />
+            <Route path="/" element={<Notes />} />
+            <Route path="/create" element={<Create />} />
           </Routes>
         </Layout>
       </Router>
